@@ -21,10 +21,10 @@ button {
   font-weight: bold;
   font-size: 15px;
   font-family: verdana;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.50);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
   background-color: #ddd;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#ccc));
-  box-shadow: 0 2px 1px rgba(0,0,0,0.16), 0 0 1px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.55);
+  box-shadow: 0 2px 1px rgba(0,0,0,0.16), 0 0 1px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.55);
   border-radius: 20px;
   border: 0px;
 }
@@ -32,7 +32,7 @@ button:hover {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3f3f3), to(#d3d3d3));
 }
 button:active {
-  box-shadow: 0 1px 1px rgba(255,255,255,0.35), inset 0 0 1px rgba(0,0,0,0.50), inset 0 1px 4px rgba(0,0,0,0.40);
+  box-shadow: 0 1px 1px rgba(255,255,255,0.35), inset 0 0 1px rgba(0,0,0,0.5), inset 0 1px 4px rgba(0,0,0,0.4);
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#cacaca), to(#d5d5d5));
 }
 .filler {
@@ -82,8 +82,8 @@ button:active {
   height: 96px;
   margin-bottom: 16px;
   border: 1px solid #999;
-  box-shadow: 0px 1px 5px rgba(128,128,128,0.50);
-  background-color: rgba(255,255,255,0.50);
+  box-shadow: 0px 1px 5px rgba(128,128,128,0.5);
+  background-color: rgba(255,255,255,0.5);
 }
 #sidebar #definitions .definition canvas {
   opacity: 0.5;
@@ -150,7 +150,7 @@ button:active {
   border: 0;
   padding: 0;
   margin: 0;
-  background-color: rgba(255,255,255,0.00);
+  background-color: rgba(255,255,255,0);
 }
 #sidebarRight .component .disclosure {
   position: absolute;
@@ -170,6 +170,11 @@ button:active {
 }
 #sidebarRight .children {
   margin-left: 20px;
+}
+#sidebarRight #export {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 #dragHint {
   position: absolute;

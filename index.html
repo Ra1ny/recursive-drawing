@@ -56,6 +56,10 @@
     <div id="components" data-bind="css: {hidden: $root.focus().components().length == 0}">
       <div data-bind="template: { name: 'component-template', data: {rootDefinition: $root.focus(), componentPath: []} }"></div>
     </div>
+
+    <div id="export">
+      <button id="exportToPng">Export</button>
+    </div>
   </div>
 
   <div id="dragHint">

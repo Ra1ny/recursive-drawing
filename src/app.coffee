@@ -7,6 +7,7 @@ startsWith = (needle, haystack) ->
 
 
 model = require("model")
+save = require("export")
 
 
 
@@ -312,6 +313,10 @@ init = () ->
     koState.focus(newDef)
     setSize()
     # render()
+
+  $("#exportToPng").on "click", (e) ->
+      require("export").makePng()
+
   
   $("#sidebarRight").on "mouseenter", ".component", (e) ->
     data = ko.dataFor(this)

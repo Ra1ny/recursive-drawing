@@ -9,7 +9,7 @@ stitch = require("stitch")
 stylus = require('stylus')
 fs = require('fs')
 
-package = stitch.createPackage(
+Package = stitch.createPackage(
   # Specify the paths you want Stitch to automatically bundle up
   paths: [ __dirname + "/src" ]
   
@@ -21,7 +21,7 @@ package = stitch.createPackage(
 
 
 compile = () ->
-  package.compile (err, source) ->
+  Package.compile (err, source) ->
     fs.writeFile 'compiled/app.js', source, (err) ->
       if (err) then throw err
       console.log('Compiled app.js')

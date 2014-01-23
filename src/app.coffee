@@ -27,7 +27,7 @@ window.movedCircle = movedCircle = model.makeCompoundDefinition()
 definitions = ko.observableArray([
   circle,
   square,
-  # triangle,
+  triangle,
   movedCircle
 ])
 

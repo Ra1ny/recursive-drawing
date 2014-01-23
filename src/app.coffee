@@ -10,8 +10,15 @@ model = require("model")
 save = require("export")
 
 
-
-
+drawStar = (ctx, x, y, r, p, m) ->
+    ctx.moveTo 0, 0 - r
+    i = 0
+    while i < p
+        ctx.rotate Math.PI / p
+        ctx.lineTo 0, 0 - (r * m)
+        ctx.rotate Math.PI / p
+        ctx.lineTo 0, 0 - r
+        i++
 
 circle = model.makePrimitiveDefinition (ctx) -> ctx.arc(0, 0, 1*require("config").normalizeConstant, 0, Math.PI*2)
 square = model.makePrimitiveDefinition (ctx) -> ctx.rect(-1*require("config").normalizeConstant, -1*require("config").normalizeConstant, 2*require("config").normalizeConstant, 2*require("config").normalizeConstant)
@@ -21,6 +28,8 @@ triangle = model.makePrimitiveDefinition (ctx) ->
   ctx.lineTo(n, n/Math.sqrt(3))
   ctx.lineTo(-n, n/Math.sqrt(3))
   ctx.lineTo(0, -n*2*Math.sqrt(3)/3)
+star = model.makePrimitiveDefinition (ctx) ->
+    drawStar(ctx, 100, 100, 90, 5, 0.5)
 
 window.movedCircle = movedCircle = model.makeCompoundDefinition()
 
@@ -29,6 +38,7 @@ definitions = ko.observableArray([
   circle,
   square,
   triangle,
+  star,
   movedCircle
 ])
 
